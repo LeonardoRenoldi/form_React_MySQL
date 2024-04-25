@@ -3,11 +3,16 @@ const express = require("express");
 const router = express.Router();
 
 //criar rota e cadastrar
-router.get("/", async(req, res) => {
+router.post("/", async(req, res) => {
+
+//receber os dados do corpo da requisição
+ var data = req.body;
+
     return res.json({
         error: false,
-        menssage:"mensagem cadastrada com sucesso!"
-    })
+        menssage:"mensagem cadastrada com sucesso!",
+        data
+    });
 });
 
 

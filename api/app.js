@@ -5,6 +5,9 @@ const express = require("express");
 //chamar a função express
 const app = express();
 
+//criar um middleware para receber dados do corpo da req
+app.use(express.json());
+
 //incluir controllers
 const messages = require("./controllers/messages.js");
 
